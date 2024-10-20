@@ -43,6 +43,6 @@ if __name__ == '__main__':
     # st.write(sympy.expand((a*x + b)*(d*x + e))) # this will pretty print... but on the next line?
 
     st.write(f'{i+1})')
-    st.write((a*x + b) * ({d*x + e})) # = {sympy.expand((a*x + b)*(d*x + e))}')
+    st.write((a*x + b) * (d*x + e)) # = {sympy.expand((a*x + b)*(d*x + e))}')
     st.write(sympy.expand((a*x + b)*(d*x + e))) # this will pretty print... but on the next line?
   
