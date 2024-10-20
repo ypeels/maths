@@ -1,5 +1,7 @@
 # import numpy as np
 import random
+
+import streamlit as st
 import sympy
 
 verbose = False
@@ -31,9 +33,10 @@ def get_coeffs():
 
 
 if __name__ == '__main__':
+  st.write("# FOIL")
   num_problems = 20
   for i in range(num_problems):
     c = sympy.symbols('c')
     a, b, d, e = get_coeffs()
-    print(f'{i+1}) ({a*c+b})({d*c+e}) = {sympy.expand((a*c + b)*(d*c + e))}')
+    st.write(f'{i+1}) ({a*c+b})({d*c+e}) = {sympy.expand((a*c + b)*(d*c + e))}')
   
