@@ -35,9 +35,9 @@ def get_coeffs(probability_hard):
 if __name__ == '__main__':
   st.write('# FOIL')
   num_problems = st.slider('num problems', 1, 100, value=20)
-  probability_hard = st.slider('probability hard', 0, 1, value=0.2)
+  probability_hard = st.slider('percent hard', 0, 100, value=20)
   for i in range(num_problems):
     x = sympy.symbols('x')
-    a, b, d, e = get_coeffs()
+    a, b, d, e = get_coeffs(probability_hard / 100)
     st.write(f'{i+1}) ({a*x+b})({d*x+e}) = {sympy.expand((a*x + b)*(d*x + e))}')
   
