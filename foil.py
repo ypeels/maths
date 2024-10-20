@@ -39,6 +39,10 @@ if __name__ == '__main__':
   for i in range(num_problems):
     x = sympy.symbols('x')
     a, b, d, e = get_coeffs(percent_hard / 100)
-    st.write(f'{i+1}) ({a*x+b})({d*x+e})') # = {sympy.expand((a*x + b)*(d*x + e))}')
+    # st.write(f'{i+1}) ({a*x+b})({d*x+e})') # = {sympy.expand((a*x + b)*(d*x + e))}')
+    # st.write(sympy.expand((a*x + b)*(d*x + e))) # this will pretty print... but on the next line?
+
+    st.write(f'{i+1})')
+    st.write((a*x + b) * ({d*x + e})) # = {sympy.expand((a*x + b)*(d*x + e))}')
     st.write(sympy.expand((a*x + b)*(d*x + e))) # this will pretty print... but on the next line?
   
